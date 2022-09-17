@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 
-- Live Site URL: [https://fem-easybanklandingpagemaster.com]
+- Live Site URL: [https://fem-easybanklandingpagemaster.netlify.app]
 
 ## My process
 
