@@ -1,0 +1,244 @@
+@use '../global/' as *;
+@use '../abstract/' as *;
+
+.main-container {
+    position: relative;
+    @include widthheight;
+    background-image: url('/images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 -10px;
+    background-color: var(--neutralVeryLightGray);
+
+    @include breakpoints(small) {
+        background-image: url('/images/bg-intro-desktop.svg');
+        background-size: contain;
+        background-position: 350px 0;
+    }
+    @include breakpoints(large) {
+        background-position: 470px -140px;
+    }
+    @include breakpoints(xlarge) {
+        background-position: 570px -230px;
+    }
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1.5em; 
+        width: min(1100px, 100% - 2em);
+        margin: auto;
+
+        @include breakpoints(small) {
+            flex-direction: row-reverse;
+            padding-inline: 2em;
+        }
+        .banner-image {
+            flex: 1;
+            
+            .mockups {
+                position: relative;
+                top: -57px;
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+
+                &.show {
+                    transform: translateY(-100%);
+                }
+                @include breakpoints(small) {
+                    top: 20px;
+                }
+                @include breakpoints(large) {
+                   position: absolute;
+                   top: -40px;
+                   right: -130px;
+                   width: 767px;
+                   height: 939px;
+                }
+            }
+        }
+        .banner-text {
+            flex: 1;
+            text-align: center;
+            margin-block: 0;
+            position: relative;
+            top: -75px;
+
+            @include breakpoints(small) {
+               text-align: left;
+               padding-block-start: 10em;
+               width: 50%;
+            }
+            @include breakpoints(large) {
+               padding-block: 15em 5em;
+            } 
+            h1 {
+                margin-block: 1em 0.75em;
+                font-size: clamp(2.5rem, 3vw + 1.5rem, 3.3rem);
+
+                @include breakpoints(small) {
+                    margin-block-end: 17px;
+                    padding-inline: 0;
+                 }
+            }
+           .content {
+                margin-bottom: 2.75em;
+                
+                @include breakpoints(medium) {
+                    padding-inline-end:  2.5em;
+                 }
+            }
+            .cta {
+                @include calltoaction;
+            }
+        }
+    }
+    .services-section {
+        background-color: var(--neutralLightGrayishBlue);
+    }
+    .article-section {
+        margin-block-start: 1.5em;
+    }
+    .services-articles {
+        @include widthheight;
+        padding-block: 3.5em 2em;
+        
+        .wrapper {
+            width: min(1100px, 100% - 2em);
+            margin: auto;
+
+            @include breakpoints(small) {
+               padding-inline: 2em;
+            }
+
+            .section-head {
+                text-align: center;
+                margin-block-end: 0.5em;
+              
+                @include breakpoints(small) {
+                    text-align: left;
+                }
+            }
+            .head1 {
+                @include breakpoints(large) {
+                    margin-block-start: 1em; 
+                }
+            }
+            .section-text {
+                width: min(580px, 100% - 2em);
+                margin: auto;
+
+                @include breakpoints(small) {
+                   margin: 0;
+                }
+            }
+            .article2 {
+                margin-block-start: 1.875em;
+                margin-block-end: 2.75em;
+
+                @include breakpoints(large) {
+                    margin-block-start: 2.8em;
+                 }
+            }
+            .services-wrapper {
+                margin-block-start: 3em;
+            }
+            .services {
+                display: flex;
+                flex-direction: column;
+                gap: 1.25em;
+
+                @include breakpoints(small) {
+                    flex-flow: row wrap;
+                }
+                .services1 {
+                    text-align: center;
+
+                    @include breakpoints(small) {
+                       text-align: left;
+                    }
+                }
+                .article1 {
+                    background-color: var(--neutralWhite);
+                }
+                .services-item {
+                    width: min(500px, 100%);
+                    margin: auto;
+
+                    @include breakpoints(small) {
+                       flex: 1 0 48%;
+                        margin: 0;
+                        gap: 2em;
+                    }
+                    @include breakpoints(medium) {
+                        flex: 1 0 22%;
+                        margin: 0;
+                        gap: 2em;
+                    }
+                    .img-services {
+                        .image2 {
+                            border-top-left-radius: 5px;
+                            border-top-right-radius: 5px;
+                            width: 100%;
+                            height: 200px;
+                            object-fit: cover;
+                            object-position: top;
+                        }
+                    }
+                    .services-images {
+                        @include breakpoints(large) {
+                            padding-block: 1em;
+                        }
+                    }
+                    .content2 {
+                        padding-inline: 1.5em;
+                    }
+                    .services-content {
+                        padding-block: 1.125em 1.5em;
+
+                        .services-subhead {
+                            @include breakpoints(large) {
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .author {
+                            font-size: 0.625rem;
+                            opacity: 0.5;
+                            font-weight: 700;
+                            color: var(--neutralGrayishBlue);
+                        }
+                        .content {
+                            margin-block-start: 1.25em;
+                        }
+                        .content-subtitle {
+                            font-size: 1.1rem;
+                            font-weight: 400;
+                            color: var(--primaryDarkBlue);
+                            margin-block: 0.625em 0;
+                            line-height: 1.1;
+                            display: block;
+
+                            &:hover {
+                                color: var(--primaryLimeGreen);
+                            }
+                        }
+                        .services-text {
+                            @include breakpoints(large) {
+                                font-size: 1.1rem;
+                            }
+                        }
+                        .article-text {
+                            font-size: 0.85rem;
+                            line-height: 1.3;
+                            margin-block-start: 0.625em;
+                            text-align: left;
+                            padding-block-end: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

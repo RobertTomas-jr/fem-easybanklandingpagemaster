@@ -1,0 +1,61 @@
+@use '../abstract/' as *;
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 1.125rem;
+    font-family: 'Public Sans', sans-serif;
+    background-color: var(--neutralWhite);
+    color: var(--primaryDarkBlue);
+    overflow-x: hidden;
+
+    &.show::after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--linearGradient2);
+        opacity: 0.9;
+    }
+}
+.attribution { font-size: 9px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+a, a:active, a:visited {
+    text-decoration: none;
+    font-size: 0.9375rem;
+}
+h1, h2, h3 {
+    font-weight: 400;
+}
+h2 {
+    font-size: 2rem;
+    font-size: clamp(1.8rem, 2.5vw + 1.5rem, 2.5rem);
+}
+p {
+    font-size: 0.9375rem;
+    color: var(--neutralGrayishBlue);
+    font-weight: 400;
+    line-height: 1.625;
+    @include breakpoints(large) {
+        line-height: 1.5;
+    }
+}
+.content {
+    text-align: center;
+
+    @include breakpoints(small) {
+        text-align: left;
+    }
+}
+.section-text {
+    font-size: clamp(0.875rem, 1vw + 0.75rem, 1.2rem);
+}

@@ -1,0 +1,14 @@
+//colors
+:root {
+    --primaryDarkBlue: hsl(233, 26%, 24%);
+    --primaryLimeGreen: hsl(136, 65%, 51%);
+    --primaryBrightCyan: hsl(192, 70%, 51%);
+
+    --linearGradient1: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    --linearGradient2: linear-gradient(to bottom, rgba(45, 49, 77, 1), rgba(150, 152, 166, 0));
+
+    --neutralGrayishBlue: hsl(233, 8%, 62%);
+    --neutralLightGrayishBlue: hsl(220, 16%, 96%);
+    --neutralVeryLightGray: hsl(0, 0%, 98%);
+    --neutralWhite: hsl(0, 0%, 100%);
+}
