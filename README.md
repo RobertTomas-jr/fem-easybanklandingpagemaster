@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Frontend%20Mentor%20Easybank%20landing%20page.png)
+![](./images/Screenshot%202022-09-17%20at%2011-31-53%20Frontend%20Mentor%20Easybank%20landing%20page.png)
 
 
 ### Links

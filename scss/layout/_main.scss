@@ -9,6 +9,7 @@
     background-size: contain;
     background-position: 0 -10px;
     background-color: var(--neutralVeryLightGray);
+    overflow-x: hidden;
 
     @include breakpoints(small) {
         background-image: url('/images/bg-intro-desktop.svg');
